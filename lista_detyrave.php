@@ -42,7 +42,7 @@ foreach($detyrat as $det){
     <td><?php echo  $det['data_perfundimit']; ?></td>
     <td><span class=' btn btn-dark'><?php echo  $det['statusi']; ?></span></td>
     <td>
-<a href="#" class="btn btn-outline-dark">Delete</a>
+<a href="delete_detyren.php" class="btn btn-outline-dark">Delete</a>
 <a href="edit_detyren.php?id=<?php echo $det['id']; ?>" class="btn btn-dark">Edit</a>
     </td>
 </tr>

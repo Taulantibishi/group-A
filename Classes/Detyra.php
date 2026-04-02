@@ -64,6 +64,20 @@ class Detyra extends Database
 
     }
 
+        public function deleteDetyra($id);{
+    
+        $sql="delete  from detyrat  where id='$id' limit 1";
+        $result=$this->conn->query($sql);
+        if($result){
+            echo'Te dhenat u fshin me sukeses';
+        }
+        else{
+            echo"Te dhenat nuk u fshin !";
+        }
+
+
+    }
+
 
 
 
