@@ -32,6 +32,19 @@ class Detyra extends Database
 
     }
 
+      public function index(){
+        $sql="select * from detyrat";
+        $result=$this->conn->query($sql);
+
+        if($result->num_rows>0){
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
+        else{
+            return null;
+        }
+    }
+
+
     public function getAllTasks(){
 
         $sql="SELECT * from detyrat";
@@ -64,7 +77,7 @@ class Detyra extends Database
 
     }
 
-        public function deleteDetyra($id);{
+        public function deleteDetyra($id){
     
         $sql="delete  from detyrat  where id='$id' limit 1";
         $result=$this->conn->query($sql);
